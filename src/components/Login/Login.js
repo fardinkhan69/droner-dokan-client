@@ -56,8 +56,7 @@ const Login = () => {
                 <div className="mt-3 login-form">
 
                     <button onClick={handleGoogleSignIn} className="w-100 btn btn-primary social-btn mb-2"><span>Continue With Google </span></button>
-                    <button className="w-100 btn btn-primary social-btn "><span>Continue With Facebook </span></button>
-                    {/* <FontAwesomeIcon icon={faFacebook} /> */}
+
                 </div>
                 <div>
 
