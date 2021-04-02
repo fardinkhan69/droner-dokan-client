@@ -1,0 +1,13 @@
+.home{
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-box{
+    position: relative;
+}
+.search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}

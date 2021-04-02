@@ -1,0 +1,31 @@
+.addProductPage{
+    min-height: 100vh;
+    font-family: 'poppins';
+}
+.sidebar{
+    background-color: #1e4226;
+    height: 100vh;
+    padding-top: 5%;
+    color:#fff;
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 16px;
+    
+}
+.col-md-4.sidebar-bg {
+    background: #1e4226;
+}
+.sidebar-menu{
+    list-style-type: none;
+    margin-top: 10%;
+    padding:5%;
+}
+.sidebar-menu li {
+    margin-top: 4%;
+    padding: 10px 5px;
+}
+.sidebar-menu li:hover{
+    background-color: #455746;
+    cursor: pointer;
+}

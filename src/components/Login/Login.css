@@ -1,0 +1,19 @@
+.login-form{
+    width: 400px;
+    margin : 10px auto;
+}
+.social-btn{
+    background-color: transparent;
+    border-radius: 50px;
+    color: #000;
+    border: 1px solid #000;
+}
+.social-btn:hover, .social-btn:focus, .social-btn:active{
+    background-color: #FF6E40;
+    color: #fff;
+    border: 1px solid #FF6E40;
+    box-shadow: none;
+}
+.social-btn span{
+    margin-left: 10px;
+}
