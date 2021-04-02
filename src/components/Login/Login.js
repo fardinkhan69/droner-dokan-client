@@ -16,7 +16,7 @@ const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     let history = useHistory();
     let location = useLocation();
-    
+
 
     let { from } = location.state || { from: { pathname: "/" } };
 
@@ -48,16 +48,22 @@ const Login = () => {
                 // ...
             });
     }
-    
+
     return (
         <div>
-            <Header></Header>
+            
             <div className="container align-center-container">
-                <div className="mt-3 login-form">
+            <Header></Header>
+                <div className="row">
+                    <div className="col">
+                        <div className="mt-3 login-form">
 
-                    <button onClick={handleGoogleSignIn} className="w-100 btn btn-primary social-btn mb-2"><span>Continue With Google </span></button>
+                            <button onClick={handleGoogleSignIn} className="w-75 btn btn-primary social-btn mb-2"><span>Continue With Google </span></button>
 
+                        </div>
+                    </div>
                 </div>
+
                 <div>
 
 

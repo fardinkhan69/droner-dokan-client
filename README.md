@@ -10,7 +10,7 @@ Features :
  v. Dynamicaly  load product from data base backend
  vi. Delete product from frontend panel base
 
- ##live link : 
+ ##live link : https://dhakar-dokan.web.app/
 
  ### server code : https://github.com/Porgramming-Hero-web-course/full-stack-server-fardinkhan69
  heroku link : https://pumpkin-cobbler-55118.herokuapp.com/
