@@ -9,7 +9,7 @@ const Cheackout = () => {
     const [order,setOrder] =useState({});
 
     const {id} = useParams();
-    const url = `http://localhost:5055/cheackout/${id}` ;
+    const url = `https://pumpkin-cobbler-55118.herokuapp.com/cheackout/${id}` ;
     // console.log(url)
     // console.log(id)
     useEffect(()=>{
@@ -32,7 +32,7 @@ const Cheackout = () => {
            
         }
 
-        fetch(`http://localhost:5055/orderdone`,{
+        fetch(`https://pumpkin-cobbler-55118.herokuapp.com/orderdone`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

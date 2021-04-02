@@ -8,7 +8,7 @@ const AddProduct = () => {
     const { register, handleSubmit, watch, errors } = useForm();
 
     const [imgURL,setImgURL] = useState(null);
-    const onSubmit = data => {
+    const onSubmit = (data,e) => {
         const productData ={
             name : data.name,
             weight:data.weight,
@@ -25,7 +25,8 @@ const AddProduct = () => {
             body: JSON.stringify(productData)
         })
         .then(res => console.log(res))
-        console.log(productData)
+        console.log(productData);
+        e.target.reset();
     };
     const handleImageUpload = event => {
         console.log(event.target.files[0]);
