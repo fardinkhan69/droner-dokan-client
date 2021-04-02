@@ -5,29 +5,36 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../App';
+import { useHistory, useLocation } from 'react-router-dom';
 const Login = () => {
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
-     }else {
+    } else {
         firebase.app(); // if already initialized, use that one
-     }
+    }
 
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    let history = useHistory();
+    let location = useLocation();
     
-    
+
+    let { from } = location.state || { from: { pathname: "/" } };
+
+
     const handleGoogleSignIn = () => {
-        
+
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
             .signInWithPopup(provider)
             .then((result) => {
                 /** @type {firebase.auth.OAuthCredential} */
                 console.log(result.user)
-               
-                const {displayName,email,photoURL}= result.user;
 
-                const signedInUser = {name:displayName,email,photoURL};
-                setLoggedInUser(signedInUser)
+                const { displayName, email, photoURL } = result.user;
+
+                const signedInUser = { name: displayName, email, photoURL };
+                setLoggedInUser(signedInUser);
+                history.replace(from);
                 console.log(signedInUser)
                 // ...
             }).catch((error) => {
@@ -41,10 +48,10 @@ const Login = () => {
                 // ...
             });
     }
-
+    
     return (
         <div>
-           <Header></Header>
+            <Header></Header>
             <div className="container align-center-container">
                 <div className="mt-3 login-form">
 
@@ -54,7 +61,7 @@ const Login = () => {
                 </div>
                 <div>
 
-                    
+
                 </div>
             </div>
         </div>

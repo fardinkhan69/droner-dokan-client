@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import { createContext, useState } from 'react';
 import ManageProduct from './components/ManageProduct/ManageProduct';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -33,9 +34,9 @@ function App() {
        <Route  path="/home">
           <Home></Home>
        </Route>
-       <Route exact path="/addproduct">
+       <PrivateRoute exact path="/addproduct">
           <AddProduct></AddProduct>
-       </Route>
+       </PrivateRoute>
        <Route exact path="/login">
           <Login></Login>
        </Route>
