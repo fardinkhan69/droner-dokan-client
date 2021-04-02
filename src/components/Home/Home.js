@@ -29,6 +29,11 @@ const Home = () => {
             </div>
             <div className="container">
                 <div className="row row-cols-1 row-cols-lg-3 g-4 mt-5">
+                    {
+                        productItems.length === 0 && <div className="container"><div class="spinner-border spinner-style text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div></div>
+                    }
 
                     {
                         productItems.map(productData => <ProductCard productData={productData}></ProductCard>)

@@ -11,3 +11,7 @@
     right: 0;
     height: 100%;
 }
+.spinner-style{
+    width: 3rem !important; 
+    height: 3rem !important;
+}
