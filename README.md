@@ -14,3 +14,6 @@ Features :
 
  ### server code : https://github.com/Porgramming-Hero-web-course/full-stack-server-fardinkhan69
  heroku link : https://pumpkin-cobbler-55118.herokuapp.com/
+ 
+ 
+ Tech Used : React Js, Node Js , Mongo Db , Express Js ( MERN Stack ) , React Router , Bootstrap 5, Firebase Auth , Firebase Hosting , javascript , Html , css
